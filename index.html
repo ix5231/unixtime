@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Template</title>
+<title>unixtime</title>
 
 <style>
 <!--
@@ -27,7 +27,17 @@ footer {
 <script type="text/javascript">
 <!--
 window.onload = function() {
-    document.getElementById("content").innerHTML = "SomeContent"
+    var show = function() {
+        var date = new Date();
+
+        document.getElementById("time").textContent = Math.floor(date.getTime() / 1000);
+    }
+
+    window.setInterval(show, 100);
+}
+
+getUnixTime = function() {
+
 }
 -->
 </script>
@@ -36,15 +46,15 @@ window.onload = function() {
 
 <body>
 <header>
-    <h1>タイトル</h1>
-    説明
+    <h1>UNIX時間</h1>
+    Hello, World!
 </header>
 <article>
-    <div id='content'></div>
+    <div id='time'></div>
 </article>
 
 <footer>
-    <a href="https://github.com/ix5231/template">GitHub repo</a>
+    <a href="https://github.com/ix5231/unixtime">GitHub repo</a>
 </footer>
 
 </body>
